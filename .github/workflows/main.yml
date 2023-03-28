@@ -1,0 +1,28 @@
+name: Build and deploy 
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@master
+        with:
+          persist-credentials: false
+          submodules: true  # TODO remove this if not using submodules in Hexo
+
+      - name: Install 🔧
+        run: npm install
+
+      - name: Build 🏗️
+        run: |
+          ng build --output-path docs --base-href /portifollium/
+
+      - name: Move docs folder 🏗️
+        run: |
+          mv docs /root/data

@@ -25,5 +25,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - uses: de-vri-es/setup-git-credentials@v2
+        with:
+          credentials: ${{secrets.GIT_CREDENTIALS}}
       - name: Build and deploy to pages
         run: npm run deploy

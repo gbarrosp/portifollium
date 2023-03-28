@@ -1,0 +1,5 @@
+<div class="door">
+  <img (click)="hideLine()" class="door-action" src="assets/imgs/door.jpeg"/>
+  <img (click)="showLine()" class="sign" src="assets/imgs/wip.png"/>
+  <img *ngIf="displayLine" class="line" src="assets/imgs/wip-animated.gif"/>
+</div>

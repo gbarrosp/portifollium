@@ -1,0 +1,24 @@
+.door{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.sign {
+  cursor: pointer;
+  position: absolute;
+  top: calc(50vh - 185px);
+  height: 165px;
+}
+
+.line {
+  position: absolute;
+  top: calc(50vh - 125px);
+  width: 155px;
+}
+
+.door-action {
+  cursor: pointer;
+}

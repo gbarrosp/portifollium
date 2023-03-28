@@ -10,22 +10,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout 🛎️
+      - name: Checkout
         uses: actions/checkout@main
         with:
           persist-credentials: false
           submodules: true  # TODO remove this if not using submodules in Hexo
 
-      - name: Install 🔧
-        working-directory: ./app
-        run: npm install
-
-      - name: Build 🏗️
+      - name: Install and build
         working-directory: ./app
         run: |
+          npm install
           ng build --output-path docs --base-href /portifollium/
-
-      - name: Move docs folder 🏗️
-        working-directory: ./app
-        run: |
           mv docs /root/data

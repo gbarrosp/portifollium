@@ -26,4 +26,4 @@ jobs:
         run: npm install
 
       - name: Build and deploy to pages
-        run: ng deploy --base-href=/portifollium/
+        run: npm run deploy

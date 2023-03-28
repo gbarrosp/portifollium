@@ -17,12 +17,15 @@ jobs:
           submodules: true  # TODO remove this if not using submodules in Hexo
 
       - name: Install 🔧
+        working-directory: ./app
         run: npm install
 
       - name: Build 🏗️
+        working-directory: ./app
         run: |
           ng build --output-path docs --base-href /portifollium/
 
       - name: Move docs folder 🏗️
+        working-directory: ./app
         run: |
           mv docs /root/data

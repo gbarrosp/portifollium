@@ -26,4 +26,7 @@ jobs:
         run: npm install
 
       - name: Build and deploy to pages
+        uses: de-vri-es/setup-git-credentials@v2.0.10
+        with:
+          credentials: ${{secrets.GIT_CREDENTIALS}}
         run: npm run deploy

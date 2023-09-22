@@ -1,1 +1,25 @@
-<app-door></app-door>
+<div class="wrapper">
+  <header>
+    <div class="background">
+      <div class="row">
+        <img src="assets/imgs/aws-logo.png"/>
+        <img src="assets/imgs/docker-logo.png"/>
+        <img src="assets/imgs/angular-logo.png"/>
+      </div>
+      <div class="row">
+        <img src="assets/imgs/cypress-logo.png"/>
+        <img src="assets/imgs/github-logo.png"/>
+        <img class="django" src="assets/imgs/django-logo.png"/>
+      </div>
+    </div>
+    <div class="foreground">
+      <img class="java" src="assets/imgs/java-logo.webp"/>
+      <img class="python" src="assets/imgs/python-logo.png"/>
+    </div>
+    <span class="title">{{welcomeRandomized}}</span>
+    <img class="arrow" src="assets/imgs/arrow-bouncing.gif"/>
+  </header>
+  <section>
+    <app-skill-panel *ngFor="let skill of skills; index as i" [skill]="skill" [imageLeft]="i % 2 == 0"></app-skill-panel>
+  </section>
+</div>

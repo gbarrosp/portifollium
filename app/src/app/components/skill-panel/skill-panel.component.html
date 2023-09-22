@@ -1,0 +1,9 @@
+<div *ngIf="description" class="panel" [ngClass]="imageLeft ? 'row' : 'row-reverse'">
+  <div class="card-title">
+    <span>{{title}}</span>
+    <img [src]="image"/>
+  </div>
+  <div class="description">
+    {{description}}
+  </div>
+</div>

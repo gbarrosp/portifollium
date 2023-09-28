@@ -3,7 +3,7 @@
   margin: 0 20px 50px 20px;
   border-radius: 25px;
   background-color: #555555;
-  padding: 20px 30px 10px 30px;
+  padding: 20px 30px;
   color: whitesmoke;
   font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
 }
@@ -13,6 +13,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
 }
 
 .row-reverse {
@@ -31,11 +32,10 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 
 .description {
   font-size: 0.8em;
   text-align: justify;
-  text-justify: inter-word;
 }

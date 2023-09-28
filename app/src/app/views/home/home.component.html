@@ -20,6 +20,6 @@
     <img class="arrow" src="assets/imgs/arrow-bouncing.gif"/>
   </header>
   <section>
-    <app-skill-panel *ngFor="let skill of skills; index as i" [skill]="skill" [imageLeft]="i % 2 == 0"></app-skill-panel>
+    <app-skill-panel [skill]="'About me'" [imageLeft]="true"></app-skill-panel>
   </section>
 </div>
